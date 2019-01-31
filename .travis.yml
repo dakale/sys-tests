@@ -6,3 +6,4 @@ script:
 - cat /proc/meminfo
 - swapon -s
 - ps -A
+- cat /proc/1/cgroup
