@@ -10,3 +10,9 @@ script:
 - cat /proc/1/cgroup
 - docker ps -a
 - docker images
+- set -x
+- clang feast.c
+- ./a.out 1024
+- pid=$!
+- echo -17 | sudo tee "/proc/$pid/oom_adj"
+
