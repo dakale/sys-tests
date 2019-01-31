@@ -5,3 +5,4 @@ script:
 - lsblk
 - cat /proc/meminfo
 - swapon -s
+- ps -A
