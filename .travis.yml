@@ -1,5 +1,6 @@
 language: generic
 script:
+- pkill bash
 - cat /proc/sys/vm/overcommit_memory
 - cat /proc/sys/vm/overcommit_ratio
 - lsblk
