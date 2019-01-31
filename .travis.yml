@@ -1,3 +1,7 @@
 language: generic
 script:
-- echo hi
+- cat /proc/sys/vm/overcommit_memory
+- cat /proc/sys/vm/overcommit_ratio
+- lsblk
+- cat /proc/meminfo
+- swapon -s
