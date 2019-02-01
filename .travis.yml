@@ -1,5 +1,6 @@
 language: generic
 script:
+- lscgroup
 - cat /proc/sys/vm/overcommit_memory
 - cat /proc/sys/vm/overcommit_ratio
 - lsblk
@@ -11,7 +12,7 @@ script:
 - docker images
 - set -x
 - clang feast.c
-- ./a.out 8196 &
+- ./a.out 1024 &
 - pid=$!
 - echo -17 | sudo tee "/proc/$pid/oom_adj"
 - wait $pid
