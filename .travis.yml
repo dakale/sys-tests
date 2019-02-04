@@ -1,5 +1,6 @@
 language: generic
 script:
+- ps -o cgroup $$
 - lscgroup
 - cat /proc/sys/vm/overcommit_memory
 - cat /proc/sys/vm/overcommit_ratio
