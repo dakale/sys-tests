@@ -1,5 +1,6 @@
 language: generic
 script:
+- sudo grep -r $$ /sys/fs/cgroup/**/*
 - ps -o cgroup $$
 - lscgroup
 - cat /proc/sys/vm/overcommit_memory
