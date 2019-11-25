@@ -1,4 +1,5 @@
 language: generic
 script:
 - tty
-- lsof
+- lsof | head -n1
+- lsof | grep $$
