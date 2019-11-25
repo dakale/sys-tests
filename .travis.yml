@@ -3,3 +3,4 @@ script:
 - tty
 - lsof | head -n1
 - lsof | grep $$
+- gpg
